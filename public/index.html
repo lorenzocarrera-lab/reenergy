@@ -8,8 +8,8 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --green: #00e5a0;
-      --green-dark: #00c488;
+      --green: #ff5fa0;
+      --green-dark: #e8458a;
       --bg: #0d0d0d;
       --bg2: #111;
       --bg3: #161616;
@@ -49,11 +49,11 @@
     .hero {
       min-height: 100vh; display: flex; align-items: center; justify-content: center;
       text-align: center; padding: 100px 24px 60px;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,229,160,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,95,160,0.08) 0%, transparent 70%);
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.25);
+      background: rgba(255,95,160,0.1); border: 1px solid rgba(255,95,160,0.25);
       color: var(--green); font-size: 12px; font-weight: 700;
       padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
       letter-spacing: 0.5px; text-transform: uppercase;
@@ -111,9 +111,9 @@
       overflow: hidden; transition: border-color .3s, transform .2s;
       cursor: pointer;
     }
-    .product-card:hover { border-color: rgba(0,229,160,0.35); transform: translateY(-4px); }
+    .product-card:hover { border-color: rgba(255,95,160,0.35); transform: translateY(-4px); }
     .product-img-wrap {
-      background: #ffffff; display: flex; align-items: center; justify-content: center;
+      background: #f0f0f0; display: flex; align-items: center; justify-content: center;
       padding: 48px 32px; min-height: 360px;
     }
     .product-img-wrap img { max-height: 320px; max-width: 100%; object-fit: contain; }
@@ -138,7 +138,7 @@
     .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
     @media (max-width: 720px) { .steps-grid { grid-template-columns: 1fr; } }
     .step-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; padding: 32px 28px; }
-    .step-num { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 800; color: rgba(0,229,160,0.2); line-height: 1; margin-bottom: 16px; }
+    .step-num { font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 800; color: rgba(255,95,160,0.2); line-height: 1; margin-bottom: 16px; }
     .step-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 10px; }
     .step-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
@@ -153,7 +153,7 @@
     .charge-highlight { font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 800; color: var(--green); margin: 16px 0 8px; }
     .charge-sub { font-size: 13px; color: var(--subtle); }
     .phones-list { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
-    .phone-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(0,229,160,0.04); border: 1px solid rgba(0,229,160,0.1); border-radius: 10px; }
+    .phone-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(255,95,160,0.04); border: 1px solid rgba(255,95,160,0.1); border-radius: 10px; }
     .phone-name { font-size: 13px; font-weight: 600; }
     .phone-time { font-size: 13px; font-weight: 700; color: var(--green); }
     .progress-bar-wrap { margin-top: 20px; }
@@ -163,7 +163,7 @@
 
     /* ─── LOCATION CARDS ─── */
     .loc-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 24px 20px; transition: border-color .2s, transform .2s; }
-    .loc-card:hover { border-color: rgba(0,229,160,0.3); transform: translateY(-3px); }
+    .loc-card:hover { border-color: rgba(255,95,160,0.3); transform: translateY(-3px); }
     .loc-icon { font-size: 32px; margin-bottom: 10px; }
     .loc-name { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
     .loc-desc { font-size: 12px; color: var(--subtle); line-height: 1.5; }
@@ -172,7 +172,7 @@
     .security-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 0; }
     @media (max-width: 720px) { .security-grid { grid-template-columns: 1fr; } }
     .sec-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 20px; padding: 28px 32px; display: flex; gap: 20px; align-items: flex-start; }
-    .sec-icon-wrap { width: 48px; height: 48px; border-radius: 12px; background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.2); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .sec-icon-wrap { width: 48px; height: 48px; border-radius: 12px; background: rgba(255,95,160,0.1); border: 1px solid rgba(255,95,160,0.2); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
     .sec-body {}
     .sec-title { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
     .sec-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
@@ -187,7 +187,7 @@
     .rev-row:last-child { border-bottom: none; }
     .rev-label { color: var(--muted); }
     .rev-val { font-weight: 700; }
-    .rev-total { background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.2); border-radius: 16px; padding: 28px; margin-top: 20px; text-align: center; }
+    .rev-total { background: rgba(255,95,160,0.08); border: 1px solid rgba(255,95,160,0.2); border-radius: 16px; padding: 28px; margin-top: 20px; text-align: center; }
     .rev-total-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--green); font-weight: 700; margin-bottom: 8px; }
     .rev-total-val { font-family: 'Space Grotesk', sans-serif; font-size: 52px; font-weight: 800; color: var(--green); line-height: 1; }
     .rev-total-period { font-size: 14px; color: var(--subtle); margin-top: 6px; }
@@ -202,12 +202,12 @@
     #richiesta { background: var(--bg2); }
     .contact-email-btn {
       display: inline-flex; align-items: center; gap: 10px;
-      background: rgba(0,229,160,0.08); border: 2px solid rgba(0,229,160,0.3);
+      background: rgba(255,95,160,0.08); border: 2px solid rgba(255,95,160,0.3);
       color: var(--green); font-size: 20px; font-weight: 700;
       padding: 20px 40px; border-radius: 16px; text-decoration: none;
       transition: background .2s, transform .15s;
     }
-    .contact-email-btn:hover { background: rgba(0,229,160,0.15); transform: translateY(-2px); }
+    .contact-email-btn:hover { background: rgba(255,95,160,0.15); transform: translateY(-2px); }
 
     /* ─── FOOTER ─── */
     footer {
@@ -533,8 +533,8 @@
     <h2 class="section-title">Porta RE-ENERGY<br>nella tua attività</h2>
     <p class="section-sub" style="margin:0 auto">Hai domande o vuoi installare una torretta? Scrivici, ti rispondiamo entro 24 ore.</p>
     <div class="divider" style="margin:20px auto 48px"></div>
-    <a href="mailto:lorenzo.carrera.09@icloud.com" class="contact-email-btn">
-      ✉️ &nbsp;lorenzo.carrera.09@icloud.com
+    <a href="mailto:info@re-energy.it" class="contact-email-btn">
+      ✉️ &nbsp;info@re-energy.it
     </a>
     <p style="margin-top:24px;font-size:13px;color:var(--subtle);">Clicca per aprire la tua app email</p>
   </div>
