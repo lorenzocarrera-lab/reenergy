@@ -198,60 +198,16 @@
     .rev-aside-title { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 8px; }
     .rev-aside-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
-    /* ─── FORM ─── */
+    /* ─── CONTATTI ─── */
     #richiesta { background: var(--bg2); }
-    .form-wrapper { max-width: 680px; margin: 56px auto 0; background: var(--bg3); border: 1px solid var(--border); border-radius: 24px; padding: 44px; }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } .form-wrapper { padding: 28px 20px; } }
-    .form-full { grid-column: 1 / -1; }
-    .form-group { display: flex; flex-direction: column; gap: 8px; }
-    .form-group label { font-size: 13px; font-weight: 600; color: var(--muted); }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-      border-radius: 10px; color: #fff; font-family: 'Inter', sans-serif;
-      font-size: 14px; padding: 13px 16px; outline: none;
-      transition: border-color .2s;
+    .contact-email-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(0,229,160,0.08); border: 2px solid rgba(0,229,160,0.3);
+      color: var(--green); font-size: 20px; font-weight: 700;
+      padding: 20px 40px; border-radius: 16px; text-decoration: none;
+      transition: background .2s, transform .15s;
     }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: rgba(0,229,160,0.5); }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: #4b5563; }
-    .form-group select option { background: #1a1a1a; }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-
-    .colore-picker { display: flex; gap: 12px; }
-    .colore-opt { flex: 1; }
-    .colore-opt input[type="radio"] { display: none; }
-    .colore-opt label {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border);
-      cursor: pointer; font-size: 14px; font-weight: 600; transition: all .2s;
-      background: rgba(255,255,255,0.03);
-    }
-    .colore-opt label .dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; }
-    .colore-opt.white label .dot { background: #fff; border: 1px solid rgba(255,255,255,0.3); }
-    .colore-opt.black label .dot { background: #1a1a1a; border: 1px solid rgba(255,255,255,0.2); }
-    .colore-opt input:checked + label { border-color: rgba(0,229,160,0.5); background: rgba(0,229,160,0.08); color: var(--green); }
-
-    .form-submit {
-      width: 100%; margin-top: 8px; padding: 16px;
-      background: var(--green); color: #000; font-family: 'Inter', sans-serif;
-      font-size: 16px; font-weight: 700; border: none; border-radius: 10px;
-      cursor: pointer; transition: background .2s, transform .1s;
-    }
-    .form-submit:hover { background: var(--green-dark); transform: translateY(-1px); }
-    .form-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
-    .form-success {
-      display: none; text-align: center; padding: 32px;
-      background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.25);
-      border-radius: 16px; margin-top: 16px;
-    }
-    .form-success h3 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; color: var(--green); margin-bottom: 8px; }
-    .form-success p { font-size: 14px; color: var(--muted); }
-    .form-error { display: none; font-size: 13px; color: #f87171; text-align: center; margin-top: 10px; }
+    .contact-email-btn:hover { background: rgba(0,229,160,0.15); transform: translateY(-2px); }
 
     /* ─── FOOTER ─── */
     footer {
@@ -570,88 +526,17 @@
   </div>
 </section>
 
-<!-- FORM -->
+<!-- CONTATTI -->
 <section id="richiesta">
   <div class="container" style="text-align:center">
-    <div class="section-tag">Richiedi informazioni</div>
+    <div class="section-tag">Contatti</div>
     <h2 class="section-title">Porta RE-ENERGY<br>nella tua attività</h2>
-    <p class="section-sub" style="margin:0 auto">Compila il modulo e ti ricontatteremo entro 24 ore con tutti i dettagli.</p>
-    <div class="divider" style="margin:20px auto 0"></div>
-
-    <div class="form-wrapper">
-      <form id="contactForm">
-        <div class="form-grid">
-
-          <div class="form-group">
-            <label for="nome">Nome e Cognome *</label>
-            <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required />
-          </div>
-          <div class="form-group">
-            <label for="attivita">Nome Attività *</label>
-            <input type="text" id="attivita" name="attivita" placeholder="Bar Sport, Palestra X..." required />
-          </div>
-
-          <div class="form-group">
-            <label for="tipo">Tipo di Attività *</label>
-            <select id="tipo" name="tipo" required>
-              <option value="" disabled selected>Seleziona...</option>
-              <option>Bar / Caffetteria</option>
-              <option>Ristorante / Pizzeria</option>
-              <option>Hotel / B&B</option>
-              <option>Palestra / Centro sportivo</option>
-              <option>Centro commerciale</option>
-              <option>Negozio / Retail</option>
-              <option>Discoteca / Locale notturno</option>
-              <option>Aeroporto / Stazione</option>
-              <option>Altro</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="citta">Città *</label>
-            <input type="text" id="citta" name="citta" placeholder="Milano, Roma..." required />
-          </div>
-
-          <div class="form-group">
-            <label for="telefono">Numero di telefono *</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+39 333 000 0000" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="mario@esempio.it" required />
-          </div>
-
-          <div class="form-group form-full">
-            <label>Colore torretta preferito</label>
-            <div class="colore-picker">
-              <div class="colore-opt white">
-                <input type="radio" id="col-white" name="colore" value="Bianca" checked />
-                <label for="col-white"><span class="dot"></span>Bianca</label>
-              </div>
-              <div class="colore-opt black">
-                <input type="radio" id="col-black" name="colore" value="Nera" />
-                <label for="col-black"><span class="dot"></span>Nera</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group form-full">
-            <label for="messaggio">Note o domande</label>
-            <textarea id="messaggio" name="messaggio" placeholder="Hai domande specifiche? Vuoi sapere i costi? Scrivici qui..."></textarea>
-          </div>
-
-        </div>
-
-        <button type="submit" class="form-submit" id="submitBtn">
-          Invia richiesta →
-        </button>
-        <div class="form-error" id="formError">Si è verificato un errore. Riprova o scrivici direttamente.</div>
-      </form>
-
-      <div class="form-success" id="formSuccess">
-        <h3>✅ Richiesta inviata!</h3>
-        <p>Grazie! Ti ricontatteremo entro 24 ore al numero o all'email che hai fornito.</p>
-      </div>
-    </div>
+    <p class="section-sub" style="margin:0 auto">Hai domande o vuoi installare una torretta? Scrivici, ti rispondiamo entro 24 ore.</p>
+    <div class="divider" style="margin:20px auto 48px"></div>
+    <a href="mailto:lorenzo.carrera.09@icloud.com" class="contact-email-btn">
+      ✉️ &nbsp;lorenzo.carrera.09@icloud.com
+    </a>
+    <p style="margin-top:24px;font-size:13px;color:var(--subtle);">Clicca per aprire la tua app email</p>
   </div>
 </section>
 
