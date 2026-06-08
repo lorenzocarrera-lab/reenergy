@@ -69,6 +69,12 @@
       font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 560px;
       margin: 0 auto 40px; line-height: 1.7;
     }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,95,160,0.1); border: 1px solid rgba(255,95,160,0.3);
+      color: #fff; font-size: 14px; padding: 10px 20px; border-radius: 100px;
+    }
+    .hero-pill strong { color: var(--green); }
     .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .btn-primary {
       background: var(--green); color: #000; font-weight: 700; font-size: 15px;
@@ -113,7 +119,7 @@
     }
     .product-card:hover { border-color: rgba(255,95,160,0.35); transform: translateY(-4px); }
     .product-img-wrap {
-      background: #f0f0f0; display: flex; align-items: center; justify-content: center;
+      background: #ffffff; display: flex; align-items: center; justify-content: center;
       padding: 48px 32px; min-height: 360px;
     }
     .product-img-wrap img { max-height: 320px; max-width: 100%; object-fit: contain; }
@@ -241,6 +247,10 @@
     <div class="hero-badge">Stazioni di ricarica condivisa</div>
     <h1>Dai energia<br>ai tuoi <span>clienti</span></h1>
     <p>Installa una torretta RE-ENERGY nella tua attività. 12 power bank sempre disponibili, ricarica in pochi minuti, zero pensieri.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
+      <div class="hero-pill">🎁 Installazione a <strong>costo zero</strong></div>
+      <div class="hero-pill">💰 Tieni il <strong>50% dei guadagni</strong></div>
+    </div>
     <div class="hero-buttons">
       <a href="#prodotto" class="btn-primary">Scopri il prodotto</a>
       <a href="#guadagno" class="btn-secondary">Calcola i guadagni</a>
@@ -339,12 +349,14 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:0;">
       <div class="loc-card"><div class="loc-icon">🎮</div><div class="loc-name">Sala giochi</div><div class="loc-desc">Sessioni lunghe, batterie scariche: noleggio perfetto</div></div>
       <div class="loc-card"><div class="loc-icon">☕</div><div class="loc-name">Bar / Caffetteria</div><div class="loc-desc">Clienti abituali che apprezzano il servizio in più</div></div>
-      <div class="loc-card"><div class="loc-icon">🍕</div><div class="loc-name">Ristorante / Pizzeria</div><div class="loc-desc">Durante la cena i clienti ricaricano comodamente</div></div>
+      <div class="loc-card"><div class="loc-icon">🍕</div><div class="loc-name">Bar / Ristorante / Pub</div><div class="loc-desc">Durante la cena i clienti ricaricano comodamente</div></div>
       <div class="loc-card"><div class="loc-icon">🏖️</div><div class="loc-name">Stabilimento balneare</div><div class="loc-desc">In spiaggia il telefono si scarica in fretta sotto il sole</div></div>
       <div class="loc-card"><div class="loc-icon">🏋️</div><div class="loc-name">Palestra / Centro sportivo</div><div class="loc-desc">Allenamento e ricarica: combo vincente</div></div>
       <div class="loc-card"><div class="loc-icon">🏨</div><div class="loc-name">Hotel / B&B</div><div class="loc-desc">Servizio apprezzato dai turisti sempre connessi</div></div>
       <div class="loc-card"><div class="loc-icon">🎵</div><div class="loc-name">Discoteca / Locale</div><div class="loc-desc">La notte il telefono si scarica — e i clienti lo sanno</div></div>
       <div class="loc-card"><div class="loc-icon">🛍️</div><div class="loc-name">Centro commerciale</div><div class="loc-desc">Alto traffico = massimo numero di noleggi al giorno</div></div>
+      <div class="loc-card"><div class="loc-icon">📚</div><div class="loc-name">Biblioteca</div><div class="loc-desc">Ore di studio = batteria che si scarica, noleggio naturale</div></div>
+      <div class="loc-card"><div class="loc-icon">🎬</div><div class="loc-name">Cinema</div><div class="loc-desc">Prima o dopo il film, i clienti hanno sempre il telefono scarico</div></div>
     </div>
   </div>
 </section>
